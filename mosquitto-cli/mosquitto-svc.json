@@ -1,0 +1,39 @@
+{
+  "kind": "List",
+  "apiVersion": "v1",
+  "id": "testmqtta",
+  "items":[
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "testmqtta",
+        "labels": {
+          "name": "testmqtta"
+        }
+      },
+      "spec": {
+        "type": "LoadBalance",
+        "ports": [
+          {
+            "name": "broker",
+            "port": 1883,
+            "targetPort": 1883,
+            "protocol": "TCP",
+            "nodePort": 31883
+          },
+		  {
+            "name": "ssl",
+            "port": 8883,
+            "targetPort": 1883,
+            "protocol": "TCP",
+            "nodePort": 31884
+          }
+        ],
+        "selector": {
+          "server-id": "1"
+        }
+      }
+    }
+  ]
+}

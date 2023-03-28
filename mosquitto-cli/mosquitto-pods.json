@@ -1,0 +1,42 @@
+{
+  "kind": "List",
+  "apiVersion": "v1",
+  "id": "mosquitto",
+  "items":[
+    {
+      "kind": "Pod",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "test-mqtt-a",
+        "labels": {
+          "name": "mosquitto",
+          "server-id": "1"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "server",
+            "image": "zhongjin0921/testmqtt",
+            "env":[
+              {
+                "name": "POD_NAMESPACE",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.namespace"
+                  }
+                }
+              }
+            ],
+            "ports":[
+              {
+                "containerPort": 1883
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
