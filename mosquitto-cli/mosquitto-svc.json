@@ -13,7 +13,7 @@
         }
       },
       "spec": {
-        "type": "LoadBalance",
+        "type": "LoadBalancer",
         "ports": [
           {
             "name": "broker",
