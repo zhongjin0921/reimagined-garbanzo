@@ -1,15 +1,15 @@
 {
   "kind": "List",
   "apiVersion": "v1",
-  "id": "testmqtta",
+  "id": "test-mqtt-a",
   "items":[
     {
       "kind": "Service",
       "apiVersion": "v1",
       "metadata": {
-        "name": "testmqtta",
+        "name": "test-mqtt-a",
         "labels": {
-          "name": "testmqtta"
+          "name": "test-mqtt-a"
         }
       },
       "spec": {

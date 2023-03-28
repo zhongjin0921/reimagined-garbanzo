@@ -1,7 +1,7 @@
 {
   "kind": "List",
   "apiVersion": "v1",
-  "id": "mosquitto",
+  "id": "test-mqtt-a",
   "items":[
     {
       "kind": "Pod",
@@ -9,7 +9,7 @@
       "metadata": {
         "name": "test-mqtt-a",
         "labels": {
-          "name": "mosquitto",
+          "name": "test-mqtt-a",
           "server-id": "1"
         }
       },
