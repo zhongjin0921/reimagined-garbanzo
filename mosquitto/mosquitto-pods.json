@@ -1,15 +1,15 @@
 {
   "kind": "List",
   "apiVersion": "v1",
-  "id": "mosquitto",
+  "id": "test-mqtt-b",
   "items":[
     {
       "kind": "Pod",
       "apiVersion": "v1",
       "metadata": {
-        "name": "test-mqtt-a",
+        "name": "test-mqtt-b",
         "labels": {
-          "name": "mosquitto",
+          "name": "test-mqtt-b",
           "server-id": "1"
         }
       },
@@ -17,7 +17,7 @@
         "containers": [
           {
             "name": "server",
-            "image": "zhongjin0921/testmqtt:2.0",
+            "image": "eclipse-mosquitto:1.6.14",
             "env":[
               {
                 "name": "POD_NAMESPACE",
@@ -31,7 +31,7 @@
             ],
             "ports":[
               {
-                "containerPort": 1884
+                "containerPort": 1883
               }
             ]
           }

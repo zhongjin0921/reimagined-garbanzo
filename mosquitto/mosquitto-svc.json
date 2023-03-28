@@ -1,15 +1,15 @@
 {
   "kind": "List",
   "apiVersion": "v1",
-  "id": "testmqtta",
+  "id": "test-mqtt-b",
   "items":[
     {
       "kind": "Service",
       "apiVersion": "v1",
       "metadata": {
-        "name": "testmqtta",
+        "name": "test-mqtt-b",
         "labels": {
-          "name": "testmqtta"
+          "name": "test-mqtt-b"
         }
       },
       "spec": {
@@ -18,16 +18,16 @@
           {
             "name": "broker",
             "port": 1883,
-            "targetPort": 1884,
+            "targetPort": 1883,
             "protocol": "TCP",
-            "nodePort": 31873
+            "nodePort": 31893
           },
 		  {
             "name": "ssl",
             "port": 8883,
-            "targetPort": 1884,
+            "targetPort": 1883,
             "protocol": "TCP",
-            "nodePort": 31874
+            "nodePort": 31894
           }
         ],
         "selector": {
